@@ -7,10 +7,13 @@
  */
 
 class Chat {
-    constructor() {
-
+    constructor(messages) {
+        this._messages = messages;
     }
 
+    // Send a Message to another a User
+    sendMessage() {}
+
+    // Delete a User Message
     deleteMessage() {}
-    reactToMessage () {}
 }
