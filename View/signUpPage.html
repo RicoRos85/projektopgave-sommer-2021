@@ -18,14 +18,27 @@
 			<input type="text" placeholder="firstName" />
 			<input type="text" placeholder="lastName" />
 			<input type="number" placeholder="age" />
-			<input type="text" placeholder="gender" />
-			<input type="text" placeholder="sexInterest" />
+
+			<label for="gender">Choose your gender:</label>
+			<select name="gender" id="gender">
+				<option value="sport">Man</option>
+				<option value="party">Women</option>
+			  </select>	
+
+			<label for="sexPreference">Choose your preference:</label>
+			<select name="sexPreference" id="sexPreference">
+				<option value="sport">Man</option>
+				<option value="party">Women</option>
+
+			  </select>			
+			<label for="interest">Choose a interest:</label>
 			<select name="interest" id="interest">
 				<option value="sport">Sport</option>
 				<option value="party">Party</option>
 				<option value="chill">Chill</option>
 				<option value="career">Career</option>
 			  </select>
+			  
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
 			<button>Sign Up</button>
