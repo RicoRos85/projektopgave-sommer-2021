@@ -9,13 +9,23 @@
 </head>
 
 <body>
-    <h2>Tinder 2.0 made by JSSR technologies</h2>
+    <h2>Jungle made by JSSR technologies</h2>
 
 <div class="container" id="container"> <!--Creating overall division to contain the code-->
 	<div class="form-container sign-up-container"> <!--Creating the Sign-up form so a user can join the app-->
 		<form action="#">
 			<h1>Opret konto</h1> 
-			<input type="text" placeholder="Name" />
+			<input type="text" placeholder="firstName" />
+			<input type="text" placeholder="lastName" />
+			<input type="number" placeholder="age" />
+			<input type="text" placeholder="gender" />
+			<input type="text" placeholder="sexInterest" />
+			<select name="interest" id="interest">
+				<option value="sport">Sport</option>
+				<option value="party">Party</option>
+				<option value="chill">Chill</option>
+				<option value="career">Career</option>
+			  </select>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
 			<button>Sign Up</button>
