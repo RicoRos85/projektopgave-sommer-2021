@@ -1,0 +1,14 @@
+{
+    "server": "skole-server.database.windows.net",
+    "authentication": {
+        "type": "default",
+        "options": {
+            "userName": "RicoRos",
+            "password": "C#ristina!23"
+        }
+    }, 
+    "options": {
+        "encrypt": true,
+        "database": "godkendelsesopgave7"
+    }
+}
