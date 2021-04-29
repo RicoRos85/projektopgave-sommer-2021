@@ -9,6 +9,8 @@
     }, 
     "options": {
         "encrypt": true,
-        "database": "godkendelsesopgave7"
+        "database": "eksamensopgave"
     }
 }
+
+// PORT = 1433
