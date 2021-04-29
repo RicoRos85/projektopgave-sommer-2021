@@ -1,0 +1,19 @@
+h1{
+    color: white;
+}
+
+.navigation{
+    text-align:inherit;
+    
+}
+body{
+    
+    background: #FF4B2B;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	
+}
+
+
