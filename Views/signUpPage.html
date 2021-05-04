@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmerings Eksamen 2021 | Tinder 2.0</title>
+    <link rel="stylesheet" href="signUpPage.css"> <!--Link to stylesheet-->
+</head>
+
+<body>
+    <h2>Tinder 2.0 made by JSSR technologies</h2>
+
+<div class="container" id="container"> <!--Creating overall division to contain the code-->
+	<div class="form-container sign-up-container"> <!--Creating the Sign-up form so a user can join the app-->
+		<form action="#">
+			<h1>Opret konto</h1> 
+			<input type="text" placeholder="Name"  />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+
+	<div class="form-container sign-in-container"> <!-- Creating the Sign-in form so user can access the app-->
+		<form action="#">
+			<h1>Sign in</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign In</button>
+		</form>
+	</div>
+
+
+	<div class="overlay-container"> 
+		<div class="overlay">
+			<div class="overlay-panel overlay-left"> <!--A overlay is created so a user can go back to sign-in page-->
+				<h1>Velkommen tilbage!</h1>
+				<p>Indtast dine personlige oplysninger og begynd at bruge appen</p>
+				<button class="transparent" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right"> <!--A overlay is created, so the user can go to the sign-up page-->
+				<h1>Hej og velkommen</h1>
+				<p>Indtast dine personlige oplysninger og begynd at bruge appen</p>
+				<button class="transparent" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+<script src="signUpPage.js"></script> <!-- Link to the JS file-->
+
+</html>

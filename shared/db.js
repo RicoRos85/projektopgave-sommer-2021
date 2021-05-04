@@ -2,7 +2,6 @@ const { Connection, Request, TYPES } = require('tedious');
 const config = require('./config.json');
 
 
-
 var connection = new Connection(config);
 
 function startDB() {
@@ -26,8 +25,6 @@ module.exports.sqlConnection = connection;
 
 // Make startDB() available globally
 module.exports.startDB = startDB;
-
-
 
 
 function insert(payload) {
@@ -56,6 +53,38 @@ function insert(payload) {
 module.exports.insert = insert;
 
 
+/*******************
+ * Log in function *
+ *******************/
+function login(payload) {
+    return new Promise((resolve, reject) => {
+
+        // Create query for DB
+        const sql = 'SELECT * FROM eksamensopgave.eksamensopgave_tabeller.[User]';
+        // Make a Request to the DB using the Query
+        const request = request = new Request(sql, (err, rowcount) => {
+            // If an error happened
+            if(err) {
+                reject(err);
+            // If no User was found
+            } else if (rowcount == 0) {
+                reject({message: 'User does not exsist.'});
+            }
+        });
+        
+        // Adding 'name' and the parameter @name
+        // request.addParameter('name', TYPES.VarChar, name);
+
+        request.on('row', (columns) => {
+            resolve(columns)
+        });
+        connection.execSql(request);
+    });
+}
+
+module.exports.login = login;
+
+
 function select(name) {
     // Return promise with 'resolve' and 'reject'
     return new Promise((resolve, reject) => {
@@ -82,3 +111,6 @@ function select(name) {
 
 // Make select() available globally
 module.exports.select = select;
+
+
+
