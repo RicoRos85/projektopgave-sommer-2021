@@ -1,3 +1,6 @@
+var Users = require('../../user/index');
+
+
 /******************
  * Login User *
  ******************/
@@ -13,8 +16,8 @@ form.addEventListener('submit', function(e) {
     var password = document.getElementById("loginPassword").value;
 
     // POST the parameters
-    fetch('http://localhost:7071/api/HttpTrigger1', {
-        method: 'POST',
+    fetch('http://localhost:7071/api/user', {
+        method: 'GET',
         mode: "no-cors",
         body: JSON.stringify ({
             email: email,

@@ -29,17 +29,22 @@ module.exports.startDB = startDB;
 
 function insert(payload) {
     return new Promise((resolve, reject) => {
-        const sql = `INSERT INTO [user].[user] (name, email, gender) VALUES (@name, @email, @gender);
-                     INSERT INTO [user].user_likes (user_id, likes) VALUES ((SELECT id FROM [user].[user] WHERE name=@name), 0)`;
+        const sql = `INSERT INTO eksamensopgave.eksamensopgave_tabeller.[User] (firstName, lastName, email, age, gender, sex, userDescription, pass) VALUES (@firstName, @lastName, @email, @age, @gender, @sex, @userDescription, @pass)`;
+                     // INSERT INTO [user].user_likes (user_id, likes) VALUES ((SELECT id FROM [user].[user] WHERE name=@name), 0)`;
         const request = new Request(sql, (err) => {
             if(err) {
                 reject(err);
                 console.log(err);
             } 
         });
-        request.addParameter('name', TYPES.VarChar, payload.name);
+        request.addParameter('firstName', TYPES.VarChar, payload.firstName);
+        request.addParameter('lastName', TYPES.VarChar, payload.lastName);
         request.addParameter('email', TYPES.VarChar, payload.email);
-        request.addParameter('gender', TYPES.VarChar, payload.gender);
+        request.addParameter('age', TYPES.VarChar, payload.age);
+        request.addParameter('gender', TYPES.VarChar, payload.age);
+        request.addParameter('sex', TYPES.VarChar, payload.age);
+        request.addParameter('userDescription', TYPES.VarChar, payload.age);
+        request.addParameter('pass', TYPES.VarChar, payload.age);
 
         request.on('requestCompleted', (row) => {
             console.log('User inserted', row);
@@ -85,11 +90,11 @@ function login(payload) {
 module.exports.login = login;
 
 
-function select(name) {
+function select(email) {
     // Return promise with 'resolve' and 'reject'
     return new Promise((resolve, reject) => {
 
-        const sql = 'SELECT [user].[user].id, [user].[user].name, [user].[user].email, [user].[user].gender, [user].user_likes.likes  FROM [user].[user]  INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id WHERE name = @name';
+        const sql = 'SELECT * FROM eksamensopgave.eksamensopgave_tabeller.[User] WHERE email = @email';
         const request = new Request(sql, (err, rowcount) => {
             if (err) {
                 reject(err);
@@ -99,11 +104,12 @@ function select(name) {
             }
         });
         // If everything goes well we are adding 'name' and the parameter @name
-        request.addParameter('name', TYPES.VarChar, name);
+        request.addParameter('email', TYPES.VarChar, email);
 
         request.on('row', (columns) => {
             resolve(columns)
         });
+        // Execute request
         connection.execSql(request);
 
     }); 
