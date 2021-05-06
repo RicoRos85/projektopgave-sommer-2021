@@ -1,0 +1,40 @@
+table.table tr th:nth-child(5) {
+    text-align: center;
+}
+
+table.table tr td {
+    vertical-align: middle;
+}
+
+table.table tr td:nth-child(5) {
+    width: 100px;
+    padding: 10px 20px;
+}
+
+.imgContainer {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+.imgContainer img {
+    min-width: 100px;
+    margin-left: -10px;
+}
+.likeIcon {
+    width: 100px;
+    text-align: center;
+}
+
+.glyphicon-heart:before {
+    font-size: 22px;
+}
+
+.glyphicon-heart:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.glyphicon-remove:hover {
+    color: red;
+    cursor: pointer;
+}

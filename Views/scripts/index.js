@@ -1,4 +1,4 @@
-var Users = require('../../user/index');
+const Users = require('../../user/index');
 
 
 /******************
@@ -15,9 +15,11 @@ form.addEventListener('submit', function(e) {
     var email = document.getElementById("loginEmail").value;
     var password = document.getElementById("loginPassword").value;
 
+    
+
     // POST the parameters
     fetch('http://localhost:7071/api/user', {
-        method: 'GET',
+        method: 'POST',
         mode: "no-cors",
         body: JSON.stringify ({
             email: email,
@@ -35,7 +37,7 @@ form.addEventListener('submit', function(e) {
     })
     // Catch if any errors accur
     .catch((err) => {
-        console.log("Error: " + err);
+        console.log("Error (Views/js/index.js): " + err);
     })
 });
 

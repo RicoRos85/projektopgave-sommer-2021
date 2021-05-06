@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+    
+    <div id="slideContainer"></div>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Happnnnnn</a>
+              </div>
+              
+              
+
+               <form class="navbar-form navbar-right">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="row">         
+            <div class="col-md-9">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Fornavn</th>
+                            <th>Efternavn</th>
+                            <th>Køn</th>
+                            <th>Alder</th>
+                            <th>Billede</th>
+                            <th class="likeIcon">Like/Dislike</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ole</td>
+                            <td>Henriksen</td>
+                            <td>Mand</td>
+                            <td>54</td>
+                            <td><div class="imgContainer"><img src="img/ole-h.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Søren</td>
+                            <td>Espersen</td>
+                            <td>Mand</td>
+                            <td>23</td>
+                            <td><div class="imgContainer"><img src="img/soren-e.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Astrid</td>
+                            <td>Lindgren</td>
+                            <td>Kvinde</td>
+                            <td>72</td>
+                            <td><div class="imgContainer"><img src="img/astrid-l.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Lilje</td>
+                            <td>Vanilje</td>
+                            <td>Kvinde</td>
+                            <td>21</td>
+                            <td><div class="imgContainer"><img src="img/vanilje.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Torben</td>
+                            <td>Tyrring</td>
+                            <td>Mand</td>
+                            <td>21</td>
+                            <td><div class="imgContainer"><img src="img/torben-t.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Dillermand</td>
+                            <td>Mand</td>
+                            <td>33</td>
+                            <td><div class="imgContainer"><img src="img/john-d.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Mads</td>
+                            <td>Mikkelsen</td>
+                            <td>Mand</td>
+                            <td>45</td>
+                            <td><div class="imgContainer"><img src="img/mads-m.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Paprika</td>
+                            <td>Steen</td>
+                            <td>Kvinde</td>
+                            <td>37</td>
+                            <td><div class="imgContainer"><img src="img/paprika-s.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Tessa</td>
+                            <td>T.</td>
+                            <td>Kvinde</td>
+                            <td>21</td>
+                            <td><div class="imgContainer"><img src="img/tessa.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Morten</td>
+                            <td>Münster</td>
+                            <td>Mand</td>
+                            <td>21</td>
+                            <td><div class="imgContainer"><img src="img/morten-m.jpeg" alt="" class="img-responsive"></div></td>
+                            <td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        
+                        </tr>
+                    </tbody>
+                    
+                  </table>
+            </div>
+
+            <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" class="active"><a href="file:///Users/rico/test/projektopgave-sommer-2021/Views/home.html">Find match</a></li>
+                    <li role="presentation" ><a href="file:///Users/rico/test/projektopgave-sommer-2021/Views/profile.html">Profil</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>       
+                </ul>
+            </div>
+          </div>
+    </div>
+
+
+    <script src="scripts/data.js"></script>
+</body>
+</html>
