@@ -42,25 +42,16 @@
             </div><!-- /.container-fluid -->
         </nav>
 
-        <div class="row">         
+        <div class="row">    
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    
+                    <li class="active"><a href="file:///Users/rico/test/projektopgave-sommer-2021/Views/myProfile.html">Min profil</a></li>
+                    <li> Mine matches</li>
+                </ol>    
+            </div>     
             <div class="col-md-9">
-                <h2>Alle brugere</h2>
-                <form class="form-inline">
-                    <div class="form-group">
-                      Søg efter 
-                      <select name="" id="" class="form-control">
-                          <option value="female">kvinder</option>
-                          <option value="female">mænd</option>
-                          <option value="female">mænd og kvinder</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                        i alderen: 
-                        <input type="number" min="18" max="99" class="form-control filterAge"> til 
-                        <input type="number" min="18" max="99" class="form-control filterAge">
-                    </div>
-                    <button type="submit" class="btn btn-default">Søg</button>
-                  </form>
+                <h2>Mine matches</h2>
                 <hr>
                 <table id="" class="table table-striped">
                     <thead>
@@ -73,19 +64,22 @@
                             <th class="likeIcon">Like/Dislike</th>
                         </tr>
                     </thead>
-                    <tbody id="allUsers">
+                    <tbody id="myMatches">
                         
                     </tbody>
                     
                   </table>
             </div>
 
-            <div class="col-md-3">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="home.html">Find match</a></li>
-                    <li role="presentation" ><a href="myProfile.html">Min profil</a></li>     
+            <div class="col-md-3"><ul class="nav nav-pills nav-stacked">
+                <li role="presentation" ><a href="home.html">Find match</a></li>
+                <li role="presentation" class="active"><a href="myProfile.html">Min profil</a></li>
+                <ul>
+                    <li role="presentation"><a href="myMatches.html"><strong>Mine matches</strong></a></li>
+                    <li><a href="#">Slet min profil</a></li>
+                        <li><a href="#">Log ud</a></li>
                 </ul>
-            </div>
+            </ul></div>
           </div>
     </div>
 

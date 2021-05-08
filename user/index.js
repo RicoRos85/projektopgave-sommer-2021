@@ -1,8 +1,8 @@
-const db = require('../shared/db');
+//const db = require('../shared/db');
 
 // Include Bcrypt
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+// const bcrypt = require('bcrypt');
+// const saltRounds = 10;
 
 
 module.exports = async function (context, req) {
@@ -14,7 +14,7 @@ module.exports = async function (context, req) {
     } 
     // If we get an error
     catch(error) {
-        console.log("Error connection to DB (user/index.js line 32): ", error.message)
+        console.log("Error connection to DB (user/index.js line 17): ", error.message)
     }
     switch(req.method) {
         // If we are using a GET request
@@ -73,5 +73,6 @@ async function post(context, req) {
 async function createNewUser(email, password, connection) {
 
 }
+
 
 

@@ -38,3 +38,54 @@ table.table tr td:nth-child(5) {
     color: red;
     cursor: pointer;
 }
+
+/* Home */
+.filterAge {
+    width: 62px !important;
+}
+
+/* Profile Page */
+h2.profileName {
+    display: inline;
+}
+.profileImage {
+    width: 100%;
+}
+.matchBtnContainer {
+    position: absolute;
+    top: 3px;
+    right: 17px;
+    float: right;
+}
+.matchBtnContainer button {
+    background: #c50000;
+    border: none;
+    color: white;
+    padding: 5px 10px 4px;
+}
+.matchBtnContainer button span {
+    margin-top: 2px;
+} 
+.its-a-match {
+    top: -2px;
+    position: relative;
+    font-size: 11px;
+    color: green;
+}
+.its-a-match:hover {
+    cursor: pointer;
+    color: grey;
+}
+.profileTable {
+    margin-top: 8px;
+}
+table.profileTable tr td {
+    vertical-align: top;
+}
+table.profileTable tr td:nth-child(1) {
+    width: 130px;
+    display: block;
+}
+table.profileTable tr td:nth-child(2) {
+    width: 100%;
+}
