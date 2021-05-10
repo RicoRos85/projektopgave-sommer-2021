@@ -89,3 +89,7 @@ table.profileTable tr td:nth-child(1) {
 table.profileTable tr td:nth-child(2) {
     width: 100%;
 }
+/* My matches */
+#myMatches .likeIcon span {
+    color: #5bc0de;
+}

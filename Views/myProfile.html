@@ -44,15 +44,21 @@
               
                     <div class="row">
                         <div class="col-xs-6 col-md-4">
-                            <img src="img/soren-e.jpeg" class="img-rounded profileImage" alt="...">
+                            <img src="img/soren-e.jpeg" class="img-rounded profileImage" alt="..."><br>
+                            <br>
+                            <div class="d-grid gap-2 col-12 mx-auto">
+                                <button class="btn btn-info" type="button">Skift profilbillede</button>
+                                <button class="btn btn-outline-secondary btn-danger" type="button"> <span class="glyphicon glyphicon-remove " aria-hidden="true"></span> Slet</button>
+                            </div>
+                            
                         </div>
                         <div class="col-xs-6 col-md-8">
                             <h2 class="profileName">Søren Espersen </h2><br> 
                             
                             <br>
                            
-                                <a class="btn btn-success" href="file:///Users/rico/test/projektopgave-sommer-2021/Views/editMyProfile.html">Rediger profil</a>
-                                <button class="btn btn-danger">Slet profil</button>
+                                <a class="btn btn-info" href="file:///Users/rico/test/projektopgave-sommer-2021/Views/editMyProfile.html">Rediger profil</a>
+                                <button class="btn btn-danger" id="deleteProfile" onclick="alertDeleteUser()">Slet profil </button>
                        
                             <br><br>
                             <table class="table table-striped profileTable">
@@ -103,5 +109,6 @@
           </div>
     </div>
 
+    <script src="scripts/data.js"></script>
 </body>
 </html>
