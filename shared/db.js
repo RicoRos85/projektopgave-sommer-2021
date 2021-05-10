@@ -120,7 +120,7 @@ module.exports.select = select;
 
 
 
-unction selectAll() {
+function selectAll() {
     return new Promise((resolve, reject) => {
 
         //const sql = 'SELECT * FROM [user].[user] INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id';
