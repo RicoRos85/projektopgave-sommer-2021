@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });
         document.getElementById("allUsers").innerHTML = displayUser.join("");
 
-    } else if(document.getElementById("myMatches")!='undefined') {
+    } else if(document.getElementById("myMatches")!= null) {
 
         // Array with matched Users
         var matchedUser = [
@@ -83,9 +83,10 @@ document.addEventListener("DOMContentLoaded", function(){
             displayUser.push(content);      
         });
         document.getElementById("myMatches").innerHTML = displayUser.join("");
-        console.log(matchedUser);    
+        console.log(matchedUser);   
+        console.log(document.getElementById("myMatchess")) 
 
-    } else if(document.getElementById("allUsersAdmin")!='undefined') { 
+    } else if(document.getElementById("allUsersAdmin")!=null) { 
         // Get all Users
         users.forEach(user => {
             var content  = "<tr>";
@@ -93,13 +94,14 @@ document.addEventListener("DOMContentLoaded", function(){
             content  += '<td><a href="profile.html">' + user[1] + '</a></td>';
             content  += '<td>' + user[2] + '</a></td>';
             content  += '<td>' + user[3] + '</a></td>';
-            content  += '<td><div class="imgContainer"><a href="profile.html"><img src="img/' + user[4] + '" alt="" class="img-responsive"></div></a></td>';
-            content  += '<td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>';
+            content  += '<td><div class="imgContainer"><a href="profile.html"><img src="../img/' + user[4] + '" alt="" class="img-responsive"></div></a></td>';
+            content  += '<td><a href=""><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>';
+            content  += '<td><a href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>';
             content  += "</tr>";
 
             displayUser.push(content);      
         });
-        document.getElementById("allUsers").innerHTML = displayUser.join("");
+        document.getElementById("allUsersAdmin").innerHTML = displayUser.join("");
     }
 })
 

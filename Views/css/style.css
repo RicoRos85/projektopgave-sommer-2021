@@ -10,6 +10,10 @@ table.table tr td:nth-child(5) {
     width: 100px;
     padding: 10px 20px;
 }
+table.table tr td:nth-child(6) {
+    width: 100px;
+    padding: 10px 20px;
+}
 
 .imgContainer {
     width: 80px;

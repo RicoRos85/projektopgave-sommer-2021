@@ -120,3 +120,40 @@ module.exports.select = select;
 
 
 
+unction selectAll() {
+    return new Promise((resolve, reject) => {
+
+        //const sql = 'SELECT * FROM [user].[user] INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id';
+        var sql = 'SELECT [user].[user].id, [user].[user].name, [user].[user].email, [user].[user].gender, [user].user_likes.likes  FROM [user].[user]  INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id WHERE name = @name';
+        var requestAll = new Request(sql, (err, rowcount) => {
+            if (err) {
+                reject(err);
+                console.log("Error during 'SELECT * FROM...' in db.js line 90: " + err);
+            } else if (rowcount == 0) {
+                reject({message: 'No users found...'})
+            }
+        });
+
+        // If everything goes well we are adding 'name' and the parameter @name
+        requestAll.addParameter('name', TYPES.VarChar, name);
+
+        requestAll.on('row', (columns) => {
+            columns.forEach(function(column) {
+                console.log(column.value);
+            })
+            //resolve(columns)
+        });
+
+        requestAll.on('returnValue', function(parameterName, value, metadata) {
+            console.log(parameterName + ' = ' + value);      // number = 42
+                                                             // string = qaz
+        });
+        connection.execSql(requestAllß);
+
+        console.log("Det virkede!!!")
+
+    })
+}
+
+// Make select() available globally
+module.exports.selectAll = selectAll;
