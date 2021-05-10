@@ -83,7 +83,24 @@ document.addEventListener("DOMContentLoaded", function(){
             displayUser.push(content);      
         });
         document.getElementById("myMatches").innerHTML = displayUser.join("");
-        console.log(matchedUser);    }
+        console.log(matchedUser);    
+
+    } else if(document.getElementById("allUsersAdmin")!='undefined') { 
+        // Get all Users
+        users.forEach(user => {
+            var content  = "<tr>";
+            content  += '<td><a href="profile.html">' + user[0] + '</a></td>';
+            content  += '<td><a href="profile.html">' + user[1] + '</a></td>';
+            content  += '<td>' + user[2] + '</a></td>';
+            content  += '<td>' + user[3] + '</a></td>';
+            content  += '<td><div class="imgContainer"><a href="profile.html"><img src="img/' + user[4] + '" alt="" class="img-responsive"></div></a></td>';
+            content  += '<td class="likeIcon"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> / <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>';
+            content  += "</tr>";
+
+            displayUser.push(content);      
+        });
+        document.getElementById("allUsers").innerHTML = displayUser.join("");
+    }
 })
 
 function alertDeleteUser() {

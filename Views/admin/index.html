@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-    <title>Forside</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
     <!-- Latest compiled and minified CSS -->   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"> 
-    
-    <script src="../user/index.js"></script>
+
 </head>
-
 <body>
-
-    
-
     <div id="slideContainer"></div>
     <div class="container">
 
@@ -32,12 +26,72 @@
                 </button>
                 <a class="navbar-brand" href="#">Happnnnnn</a>
               </div>
+              
+              
             </div><!-- /.container-fluid -->
         </nav>
 
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Administration</h1>
+            </div>
+            
+            <div class="col-md-4" style="margin-top:16px;">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="home.html">Admin</a></li>
+                    <li role="presentation" ><a href="../home.html">Gå til frontend</a></li>  
+                    <li role="presentation" ><a href="myProfile.html">Log ud</a></li>     
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Antal brugere</div>
+                    <div class="panel-body">
+                      <span style="font-size:30px">20</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Antal mænd</div>
+                    <div class="panel-body">
+                      <span style="font-size:30px">11</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Antal kvinder</div>
+                    <div class="panel-body">
+                      <span style="font-size:30px">9</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Gennemsnitsalder</div>
+                    <div class="panel-body">
+                      <span style="font-size:30px">27</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <hr>
+        </div>
+
         <div class="row">         
-            <div class="col-md-9">
+            <div class="col-md-12   ">
                 <h2>Alle brugere</h2>
+                <hr>
                 <form class="form-inline">
                     <div class="form-group">
                       Søg efter 
@@ -63,26 +117,19 @@
                             <th>Køn</th>
                             <th>Alder</th>
                             <th>Billede</th>
-                            <th class="likeIcon">Like/Dislike</th>
+                            <th>Rediger</th>
+                            <th>Slet</th>
                         </tr>
                     </thead>
-                    <tbody id="allUsers">
+                    <tbody id="allUsersAdmin">
                         
                     </tbody>
                     
                   </table>
-            </div>
-
-            <div class="col-md-3">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="home.html">Find match</a></li>
-                    <li role="presentation" ><a href="myProfile.html">Min profil</a></li>     
-                </ul>
-            </div>
-          </div>
+            </div>    
+        </div>
     </div>
 
-   
-    <script src="scripts/data.js"></script>
+    <script src="../scripts/data.js"></script>
 </body>
 </html>
