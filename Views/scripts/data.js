@@ -24,6 +24,7 @@
 //   document.getElementById("slideContainer").innerHTML = str;
 
 
+
 // All Users array
 var users = [
     ["Ole", "Henriksen", "mand", 57, "ole-h.jpeg"],
@@ -108,3 +109,4 @@ document.addEventListener("DOMContentLoaded", function(){
 function alertDeleteUser() {
     confirm("Er du sikker på, at du vil slette din profil?");
 }
+

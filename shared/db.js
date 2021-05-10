@@ -4,6 +4,10 @@ const config = require('./config.json');
 
 var connection = new Connection(config);
 
+console.log("Starter startDB");
+startDB();
+console.log("Slutter startDB");
+
 function startDB() {
     return new Promise((resolve, reject) => {
         connection.on('connect', (err) => {
@@ -19,6 +23,7 @@ function startDB() {
         connection.connect();
     });
 }
+
 
 // Make connection availeble globally
 module.exports.sqlConnection = connection;
@@ -67,7 +72,7 @@ function login(payload) {
         // Create query for DB
         const sql = 'SELECT * FROM eksamensopgave.eksamensopgave_tabeller.[User]';
         // Make a Request to the DB using the Query
-        const request = request = new Request(sql, (err, rowcount) => {
+        const request = new Request(sql, (err, rowcount) => {
             // If an error happened
             if(err) {
                 reject(err);
@@ -123,12 +128,14 @@ module.exports.select = select;
 function selectAll() {
     return new Promise((resolve, reject) => {
 
-        //const sql = 'SELECT * FROM [user].[user] INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id';
-        var sql = 'SELECT [user].[user].id, [user].[user].name, [user].[user].email, [user].[user].gender, [user].user_likes.likes  FROM [user].[user]  INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id WHERE name = @name';
+        // const sql = 'SELECT * FROM [user].[user] INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id';
+        // var sql = 'SELECT [user].[user].id, [user].[user].name, [user].[user].email, [user].[user].gender, [user].user_likes.likes  FROM [user].[user]  INNER JOIN [user].user_likes ON [user].[user].id=[user].user_likes.user_id WHERE name = @name';
+        var sql = 'SELECT * FROM eksamensopgave.eksamensopgave_tabeller.[User]';
+        
         var requestAll = new Request(sql, (err, rowcount) => {
             if (err) {
                 reject(err);
-                console.log("Error during 'SELECT * FROM...' in db.js line 90: " + err);
+                console.log("Error during 'SELECT * FROM...' in db.js line 133: " + err);
             } else if (rowcount == 0) {
                 reject({message: 'No users found...'})
             }

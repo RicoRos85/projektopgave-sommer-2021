@@ -1,4 +1,20 @@
-//const db = require('../shared/db');
+// TESTING PURPOSE
+// module.exports = async function (context, req) {
+//     context.log('JavaScript HTTP trigger function processed a request.');
+
+//     const name = (req.query.name || (req.body && req.body.name));
+//     const responseMessage = name
+//         ? "Hello, " + name + ". This HTTP triggered function executed successfully."
+//         : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+
+//     context.res = {
+//         // status: 200, /* Defaults to 200 */
+//         body: responseMessage
+//     };
+// }
+const { Connection, Request, TYPES } = require('tedious');
+//const { resolve } = require('node:path');
+const db = require('../shared/db');
 
 // Include Bcrypt
 // const bcrypt = require('bcrypt');
@@ -6,7 +22,7 @@
 
 
 module.exports = async function (context, req) {
-    context.log('Javascript HTTP  trigger function processed a request');
+    console.log('Javascript HTTP  trigger function processed a request');
 
     try {
         // Start connection to DB
@@ -35,6 +51,12 @@ module.exports = async function (context, req) {
 }
 
 
+async function createUSer(context, req) {
+    console.log("Started inserting User to DB");
+
+    const email = (req.query)
+}
+
 // Get data from DB
 async function get(context, req) {
     try {
@@ -60,19 +82,54 @@ async function post(context, req) {
         let content = req.body;
         await db.insert(content);
         context.res = {
-            body: {status: 'Succes'}
+            body: {status: 'User created'}
         }
     } catch(error) {
         context.res = {
             status: 400,
-            body: error.message
+            body: `Error: User was not created: ${error.message}`
         }
     }
 }
 
-async function createNewUser(email, password, connection) {
+// Create new User
+async function createNewUser(firstName, email, pass, connection) {
+    console.log("Test");
 
+    const sql = "INSERT INTO eksamensopgave_tabeller.[User] (firstName, email, pass) VALUES (@firstName, @emial, @pass)"
+    const request = new Request(sql, err => {
+        if(err) {
+            error(err)
+        } else {
+            resolve();
+        }
+    });
+    request.addParameter('FirstName', TYPES.VarChar, firstName);
+    request.addParameter('Email', TYPES.VarChar, email);
+    request.addParameter('Password', TYPES.VarChar, pass);
+
+    connection.execSql(request);
+
+    const responseMessage = email
+        ? "Hello, " + firstName + " " + email + " " + pass + ". This HTTP triggered function executed successfully."
+        : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+
+    // const sql = "INTO eksamensopgave_tabeller.[User] (firstName, email, pass) VALUES (" + firstName + ", " + email + ", " + pass + ")"
+    // context.res = {
+    //     // status: 200, /* Defaults to 200 */
+    //     body: responseMessage
+    // };
 }
 
+var form = document.getElementById("testForm")
 
 
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    console.log("Trykket på knap")
+    
+
+    createNewUser('Rico','mail','1234');
+
+
+})

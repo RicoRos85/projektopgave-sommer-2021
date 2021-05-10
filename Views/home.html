@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"> 
     
-    <script src="../user/index.js"></script>
+      <script src="../shared/db.js"></script>
+      
+    <script src="scripts/data.js"></script>
 </head>
 
 <body>
@@ -67,6 +69,7 @@
                         </tr>
                     </thead>
                     <tbody id="allUsers">
+                     
                         
                     </tbody>
                     
@@ -82,7 +85,16 @@
           </div>
     </div>
 
-   
-    <script src="scripts/data.js"></script>
+    <form id="testForm" action="">
+        <button type="submit" id="TestBtn">Opret</button>
+    </form>
+    
+
+    <script>
+      console.log(createNewUser("Rico", "email", "1234"));
+      console.log(selectAll());
+      console.log(select("rico.rosenkrans@inovium.dk"));
+    </script>
+    <script src="../user/index.js"></script>
 </body>
 </html>
